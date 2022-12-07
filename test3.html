@@ -16,7 +16,7 @@
         <th>Tuoi</th>
     </tr>
     <tr>
-        <td><input id="birthYear" type="number"></td>
+        <td><input id="birthYear" type="number" min="1950" max="2050"></td>
         <td><p id="canSo"></p></td>
         <td><p id="chiSo"></p></td>
     </tr>
@@ -88,21 +88,18 @@
                 document.getElementById("chiSo").innerText = "Dần"
                 break;
             case 7:
-                document.getElementById("chiSo").innerText = "Đinh"
-                break;
-            case 8:
                 document.getElementById("chiSo").innerText = "Mão"
                 break;
-            case 9:
+            case 8:
                 document.getElementById("chiSo").innerText = "Thìn"
                 break;
-            case 10:
+            case 9:
                 document.getElementById("chiSo").innerText = "Tỵ"
                 break;
-            case 11:
+            case 10:
                 document.getElementById("chiSo").innerText = "Ngọ"
                 break;
-            case 12:
+            case 11:
                 document.getElementById("chiSo").innerText = "Mùi"
                 break;
                 console.log("chi so>>>>" + chiSo)
