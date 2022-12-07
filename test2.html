@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>kiem tra tam giac vuong</h1>
+<table>
+    <tr>
+        <td>nhap canh so 1</td>
+        <td><input id="canhA" type="text"></td>
+    </tr>
+    <tr>
+        <td>nhap canh so 2</td>
+        <td><input id="canhB" type="text"></td>
+    </tr>
+    <tr>
+        <td>nhap canh so 3</td>
+        <td><input id="canhC" type="text"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button onclick="checkTamGiac()">Check</button>
+        </td>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+    function checkTamGiac() {
+        let a = document.getElementById("canhA").value;
+        console.log("canh a>>>" + a)
+        let b = document.getElementById("canhB").value;
+        console.log("canh b>>>" + b)
+        let c = document.getElementById("canhC").value;
+        console.log("canh c>>>" + c);
+        if ((a == Math.sqrt(b * b + c * c)) || (b == Math.sqrt(a * a + c * c)) || (c == Math.sqrt(b * b + a * a))) {
+            document.getElementById("result").innerText = "La tam giac vuong"
+        } else {
+            if ((a < (b + c)) && (b > (a + c)) && (c > (a + b))) {
+                document.getElementById("result").innerText = "La mot tam giac"
+            } else document.getElementById("result").innerText = "Khong la tam giac"
+        }
+    }
+</script>
+</body>
+</html>
